@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedBack Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>FeedBack Form</h1>
+    <div class="boxtext">
+      <!-- 🔧 Added method and action -->
+      <form id="feedbackform" method="POST" action="/submit-feedback">
+        <div class="text">
+          <div class="info-box">
+            <h3>Send us your feedback</h3>
+            <p>
+              Do you have a suggestion or found some bug?<br />
+              Let us know in the field below
+            </p>
+          </div>
+        </div>
+
+        <div class="label">
+          <div class="form-row">
+            <label for="firstname">Your Name</label>
+            <!-- 🔧 Ensure id and for match -->
+            <input type="text" id="firstname" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Mail Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="rating">Your ratings</label>
+            <select name="rating" id="rating" required>
+              <option value="">--Select Rating--</option>
+              <option value="1">Poor</option>
+              <option value="2">Good</option>
+              <option value="3">Excellent</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- 🔧 Moved inside the form -->
+          <div class="form-row">
+            <button type="submit" id="submit">Send Feedback</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
